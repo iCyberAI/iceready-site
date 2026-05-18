@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICE Ready - Know Your Rights. Store Your Documents. Record Everything.</title>
+<meta name="description" content="ICE Ready is a free app for encrypted civil rights document storage and rights guidance during ICE encounters. Built by iCyberAI LLC.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+:root{--bg:#06080f;--surface:#0d1117;--surface2:#111827;--border:#1e2a3a;--accent:#00c8ff;--accent2:#ff4444;--text:#e8edf3;--muted:#6b7a8d;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6;overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 48px;background:rgba(6,8,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;color:var(--accent);text-decoration:none;}
+.nav-logo span{color:#fff;}
+.nav-links{display:flex;gap:32px;align-items:center;}
+.nav-links a{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;}
+.nav-links a:hover{color:var(--accent);}
+.nav-cta{background:var(--accent)!important;color:var(--bg)!important;padding:8px 20px;border-radius:2px;font-weight:600!important;}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 48px 80px;position:relative;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 70% 50%,rgba(0,200,255,0.06),transparent 70%);}
+.hero-tag{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:3px;color:var(--accent);text-transform:uppercase;margin-bottom:24px;}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,10vw,140px);line-height:0.9;color:#fff;margin-bottom:16px;}
+.hero h1 .accent{color:var(--accent);}
+.hero-sub{font-size:clamp(16px,2vw,20px);color:var(--muted);max-width:520px;margin-bottom:48px;line-height:1.7;}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg);font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:16px 32px;border-radius:2px;text-decoration:none;}
+.btn-secondary{display:inline-flex;align-items:center;background:transparent;color:var(--text);font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:16px 32px;border-radius:2px;border:1px solid var(--border);text-decoration:none;}
+.hero-stat-row{display:flex;gap:48px;margin-top:80px;padding-top:48px;border-top:1px solid var(--border);}
+.hero-stat strong{display:block;font-family:'Bebas Neue',sans-serif;font-size:40px;color:var(--accent);}
+.hero-stat span{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);}
+.section{padding:100px 48px;max-width:1200px;margin:0 auto;}
+.section-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:4px;color:var(--accent);text-transform:uppercase;margin-bottom:16px;}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,72px);color:#fff;line-height:1;margin-bottom:64px;}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);}
+.feature{background:var(--surface);padding:40px 32px;position:relative;}
+.feature-num{font-family:'Bebas Neue',sans-serif;font-size:64px;color:var(--border);position:absolute;top:16px;right:24px;}
+.feature-icon{font-size:28px;margin-bottom:20px;}
+.feature h3{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--accent);margin-bottom:12px;}
+.feature p{font-size:14px;color:var(--muted);line-height:1.7;}
+.feature-tag{display:inline-block;margin-top:20px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;color:var(--accent);border:1px solid var(--accent);padding:3px 8px;}
+.facts-bar{background:var(--accent2);padding:20px 48px;display:flex;gap:48px;flex-wrap:wrap;}
+.fact-item{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:2px;color:#fff;}
+.fact-item::before{content:'► ';}
+.download-section{padding:100px 48px;background:var(--surface);border-top:1px solid var(--border);}
+.download-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.download-copy h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,72px);color:#fff;line-height:1;margin-bottom:24px;}
+.download-copy p{color:var(--muted);font-size:15px;line-height:1.8;margin-bottom:40px;}
+.store-buttons{display:flex;flex-direction:column;gap:16px;}
+.store-btn{display:flex;align-items:center;gap:16px;background:var(--surface2);border:1px solid var(--border);padding:16px 24px;border-radius:4px;text-decoration:none;max-width:260px;}
+.store-btn-text small{display:block;font-size:10px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;}
+.store-btn-text strong{display:block;font-size:16px;color:#fff;}
+.store-btn-icon{font-size:28px;}
+.coming-soon{opacity:0.5;pointer-events:none;}
+.phone-frame{width:260px;height:520px;background:var(--surface2);border:2px solid var(--border);border-radius:36px;margin:auto;position:relative;overflow:hidden;}
+.phone-screen{position:absolute;inset:8px;background:#060a0f;border-radius:30px;display:flex;flex-direction:column;padding:24px 16px;}
+.phone-app-header{display:flex;align-items:center;gap:10px;margin-bottom:20px;}
+.phone-logo-dot{width:32px;height:32px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;}
+.phone-app-name{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:#fff;}
+.phone-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px;margin-bottom:10px;}
+.phone-card-label{font-size:9px;letter-spacing:2px;color:var(--accent);text-transform:uppercase;font-family:'DM Mono',monospace;}
+.phone-card-title{font-size:12px;color:var(--text);}
+.phone-record-btn{margin-top:auto;background:var(--accent2);border-radius:8px;padding:12px;text-align:center;font-size:11px;font-family:'DM Mono',monospace;letter-spacing:2px;color:#fff;}
+.merch-section{padding:100px 48px;max-width:1200px;margin:0 auto;}
+.merch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+.merch-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;overflow:hidden;}
+.merch-img{width:100%;aspect-ratio:1;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:64px;position:relative;}
+.merch-img::after{content:'COMING SOON';position:absolute;bottom:12px;right:12px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;color:var(--accent);border:1px solid var(--accent);padding:3px 8px;}
+.merch-info{padding:20px;}
+.merch-info h4{font-family:'Bebas Neue',sans-serif;font-size:18px;color:#fff;margin-bottom:6px;}
+.merch-info p{font-size:12px;color:var(--muted);}
+.merch-notify{display:inline-block;margin-top:12px;font-size:11px;color:var(--accent);text-decoration:none;}
+.mission-section{padding:100px 48px;background:var(--surface);border-top:1px solid var(--border);}
+.mission-inner{max-width:1200px;margin:0 auto;}
+.mission-quote{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,56px);color:#fff;line-height:1.1;max-width:800px;border-left:4px solid var(--accent);padding-left:32px;margin-bottom:48px;}
+.mission-text{display:grid;grid-template-columns:1fr 1fr;gap:64px;max-width:900px;}
+.mission-text p{font-size:15px;color:var(--muted);line-height:1.9;}
+footer{padding:48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px;color:var(--accent);}
+.footer-links{display:flex;gap:32px;}
+.footer-links a{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;}
+.footer-legal{font-size:11px;color:#2d3a4a;}
+@media(max-width:768px){nav{padding:16px 24px;}.nav-links{display:none;}.hero,.section{padding-left:24px;padding-right:24px;}.features-grid{grid-template-columns:1fr;}.download-inner{grid-template-columns:1fr;}.mission-text{grid-template-columns:1fr;}.merch-grid{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<nav><a href="/" class="nav-logo">ICE<span> READY</span></a><div class="nav-links"><a href="#features">Features</a><a href="#download">Download</a><a href="#merch">Store</a><a href="#mission">Mission</a><a href="mailto:support@iceready.app">Contact</a><a href="#download" class="nav-cta">Free Download</a></div></nav>
+<section class="hero"><div class="hero-bg"></div><div style="position:relative;max-width:1200px;margin:0 auto;width:100%"><div class="hero-tag">Free · Encrypted · Civil Rights</div><h1>KNOW YOUR<br><span class="accent">RIGHTS.</span></h1><p class="hero-sub">ICE Ready is a free app for encrypted document storage and real-time civil rights guidance during ICE encounters. Built for families. Designed for worst-case conditions.</p><div class="hero-actions"><a href="#download" class="btn-primary">Download Free</a><a href="#features" class="btn-secondary">See How It Works</a></div><div class="hero-stat-row"><div class="hero-stat"><strong>FREE</strong><span>Always free to use</span></div><div class="hero-stat"><strong>256-BIT</strong><span>Encrypted storage</span></div><div class="hero-stat"><strong>50</strong><span>State rights cards</span></div><div class="hero-stat"><strong>0</strong><span>Data sold. Ever.</span></div></div></div></section>
+<div class="facts-bar"><span class="fact-item">46 people died in ICE custody</span><span class="fact-item">Two-thirds held without charges</span><span class="fact-item">Girls 13-17 denied medical care</span><span class="fact-item">One death every 6 days</span><span class="fact-item">4,700 student visas terminated overnight</span></div>
+<section class="section" id="features"><div class="section-label">Core Features</div><div class="section-title">Built For The Worst Case</div><div class="features-grid"><div class="feature"><div class="feature-num">01</div><div class="feature-icon">🔒</div><h3>Lock Screen Access</h3><p>Documents accessible without unlocking your phone. When hands are occupied or shaking — seconds matter.</p><span class="feature-tag">Only app with this feature</span></div><div class="feature"><div class="feature-num">02</div><div class="feature-icon">🎙️</div><h3>Voice Trigger</h3><p>Hands-free activation when motor skills fail under stress. Trauma-informed design that competitors haven't considered.</p><span class="feature-tag">Worst-case human conditions</span></div><div class="feature"><div class="feature-num">03</div><div class="feature-icon">📋</div><h3>Rights Cards</h3><p>Know your rights in your state, in your language. Refuse search scripts, lawyer contact scripts — instantly available.</p><span class="feature-tag">All 50 states</span></div><div class="feature"><div class="feature-num">04</div><div class="feature-icon">🎥</div><h3>Right to Record</h3><p>One-tap recording of law enforcement encounters. Expands ICE Ready from document wallet to full civil rights toolkit.</p><span class="feature-tag">Anyone near law enforcement</span></div><div class="feature"><div class="feature-num">05</div><div class="feature-icon">🛡️</div><h3>Decoy Mode</h3><p>Hides the app behind an innocent-looking screen. Documents stay protected even if your phone is taken.</p><span class="feature-tag">Premium feature</span></div><div class="feature"><div class="feature-num">06</div><div class="feature-icon">💳</div><h3>Document Vault</h3><p>Encrypted storage for ID, passport, visa, insurance cards. Accessible offline. Never backed up to third-party servers.</p><span class="feature-tag">End-to-end encrypted</span></div></div></section>
+<section class="download-section" id="download"><div class="download-inner"><div class="download-copy"><div class="section-label">Download</div><h2>FREE. ALWAYS.</h2><p>ICE Ready is free for everyone who needs it. The community you're protecting can't be blocked by a paywall. Optional tip jar unlocks power-user features for those who can pay.</p><div class="store-buttons"><a href="#" class="store-btn coming-soon"><div class="store-btn-icon">🍎</div><div class="store-btn-text"><small>Coming Soon</small><strong>App Store</strong></div></a><a href="#" class="store-btn coming-soon"><div class="store-btn-icon">▶</div><div class="store-btn-text"><small>Coming Soon</small><strong>Google Play</strong></div></a><a href="https://app.primio.dev/ice-ready-456a" class="store-btn"><div class="store-btn-icon">🌐</div><div class="store-btn-text"><small>Available Now</small><strong>Web App</strong></div></a></div></div><div class="phone-frame"><div class="phone-screen"><div class="phone-app-header"><div class="phone-logo-dot">🧊</div><div class="phone-app-name">ICE READY</div></div><div class="phone-card"><div class="phone-card-label">Passport</div><div class="phone-card-title">US Passport</div></div><div class="phone-card"><div class="phone-card-label">Your Rights · California</div><div class="phone-card-title">You have the right to remain silent</div></div><div class="phone-card"><div class="phone-card-label">Emergency Contact</div><div class="phone-card-title">Attorney on file</div></div><div class="phone-record-btn">TAP TO RECORD</div></div></div></div></section>
+<section class="merch-section" id="merch"><div class="section-label">Store</div><div class="section-title">Wear The Movement</div><div class="merch-grid"><div class="merch-card"><div class="merch-img">👕</div><div class="merch-info"><h4>ICE Ready Tee</h4><p>Unisex heavyweight cotton. Know Your Rights front. iceready.app back.</p><a href="mailto:support@iceready.app?subject=Merch Waitlist" class="merch-notify">Notify me when available</a></div></div><div class="merch-card"><div class="merch-img">☕</div><div class="merch-info"><h4>Rights Card Mug</h4><p>11oz ceramic. Miranda rights printed in full.</p><a href="mailto:support@iceready.app?subject=Merch Waitlist" class="merch-notify">Notify me when available</a></div></div><div class="merch-card"><div class="merch-img">🧢</div><div class="merch-info"><h4>iCyberAI Cap</h4><p>Structured 6-panel hat. Embroidered ICE Ready logo.</p><a href="mailto:support@iceready.app?subject=Merch Waitlist" class="merch-notify">Notify me when available</a></div></div></div><p style="margin-top:32px;font-size:13px;color:var(--muted);font-family:'DM Mono',monospace;">Full store launching at shop.iceready.app</p></section>
+<section class="mission-section" id="mission"><div class="mission-inner"><div class="section-label">Our Mission</div><div class="mission-quote">America Has Done This Before. This Time You Can Be Prepared.</div><div class="mission-text"><p>ICE Ready was built because fear should never be the reason someone doesn't know their rights. The founder is Colombian-American, personally connected to the communities most at risk, and building this at the exact moment it matters most.</p><p>The app is free. It will stay free. No ads. No data selling. No paywall between a family and their rights. Built by iCyberAI LLC, Wyoming.</p></div></div></section>
+<footer><div class="footer-logo">ICE READY <span>· iCyberAI LLC</span></div><div class="footer-links"><a href="#features">Features</a><a href="#download">Download</a><a href="#merch">Store</a><a href="mailto:support@iceready.app">support@iceready.app</a></div><div class="footer-legal">2026 iCyberAI LLC · Wyoming · iceready.app · USPTO 99803896</div></footer>
+</body>
+</html>
