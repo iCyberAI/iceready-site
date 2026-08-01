@@ -1,0 +1,16 @@
+{
+  "name": "iceready-runway-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CLI for generating ICE READY image/video assets with the Runway API",
+  "type": "module",
+  "bin": {
+    "runway-gen": "./generate.js"
+  },
+  "scripts": {
+    "generate": "node generate.js"
+  },
+  "dependencies": {
+    "@runwayml/sdk": "^2.4.0"
+  }
+}
