@@ -280,6 +280,14 @@ footer{border-top-color:var(--border);}
     probe.onerror=function(){shot.style.display='none';cover.style.display='flex';};
     probe.src='appscreens/'+b.getAttribute('data-tab')+'.jpg?v=4';
   });});
+  var ptabs=Array.prototype.slice.call(document.querySelectorAll('.ptab'));
+  if(ptabs.length){
+    var pidx=0; ptabs[0].click();
+    if(!reduce){
+      var pauto=setInterval(function(){pidx=(pidx+1)%ptabs.length;ptabs[pidx].click();},4500);
+      ptabs.forEach(function(b){b.addEventListener('click',function(e){if(e.isTrusted){clearInterval(pauto);pidx=ptabs.indexOf(b);}});});
+    }
+  }
   if(reduce||!('IntersectionObserver' in window))return;
   var els=document.querySelectorAll('.section-label,.section-title,.feature,.merch-sub,.merch-card,.merch-foot,.download-copy,.phone-frame,.mission-quote,.mission-text p,.poem-frame,.hero-stat');
   els.forEach(function(el){el.classList.add('reveal');});
