@@ -1,0 +1,9 @@
+index-iceblue.html
+.claude/
+index-design-v2.html
+tools/runway/node_modules/
+tools/runway/output/
+
+# Never publish session notes or Claude instructions — GitHub Pages serves every tracked file
+SESSION_LOG*.md
+CLAUDE.md
