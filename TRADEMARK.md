@@ -72,6 +72,17 @@ USPTO acknowledged receipt and issued **two Service Request IDs**:
 Their auto-reply promised a response within **2 business days** (from
 Aug 3). Also called and escalated by phone.
 
+### Call log
+
+**Aug 7, 2026 (Fri), ~10:20 a.m. ET — called 571-272-3350.**
+Rep said the branch is "just catching up" and that a notice should arrive
+**today**. Pointed out the same thing was said the previous week and that
+two service request IDs are already open with no response. On that basis
+she said she was **escalating to management**.
+
+Open item: no new reference number or rep name captured for this call.
+If nothing arrives, ask for both next time.
+
 ### Known trap for when they do respond
 Recording an assignment updates the *assignment* database. It does not
 always update the **owner of record** shown on the application itself —
