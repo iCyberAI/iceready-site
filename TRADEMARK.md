@@ -83,6 +83,44 @@ she said she was **escalating to management**.
 Open item: no new reference number or rep name captured for this call.
 If nothing arrives, ask for both next time.
 
+### OUTCOME — Notice of NON-Recordation, Aug 7, 2026
+
+The assignment was **refused recordation**. Notice received 7:29 a.m.
+PT on Aug 7, 2026, from ptas@uspto.gov to support@iceready.app.
+Signed by Sulonda Stevenson, Assignment Recordation Branch,
+Public Records Division.
+
+| Item | Value |
+|---|---|
+| WUID / Document ID | **901024789** |
+| Access Code | **5QJHOP170KQGT8C** |
+| First assignee | iCyberAI LLC |
+| Notice date | August 7, 2026 |
+
+**Sole reason given:** a discrepancy in the conveying party name. The
+cover sheet reads "Robert Perdomo"; the assignment document reads
+"Robert C. Perdomo."
+
+**Correction deadline: Monday, September 7, 2026** (37 CFR 3.51). If the
+corrected resubmission is filed by then, the **original May 18, 2026
+filing date is preserved**. Note that Sep 7, 2026 is Labor Day — do not
+plan around the deadline itself; file well before it.
+
+### How to resubmit
+
+1. Go to https://assignmentcenter.uspto.gov
+2. Click **Resubmission**
+3. Enter Document ID **901024789** and Access Code **5QJHOP170KQGT8C**
+4. Correct the conveying party name so the cover sheet matches the
+   executed assignment agreement — i.e. use **"Robert C. Perdomo"** on
+   the cover sheet. (Changing the cover sheet is far easier than
+   re-executing the agreement.)
+5. The resubmission must include **all pages** of the original submitted
+   document, not just the corrected page.
+
+**Unconfirmed:** whether a new $40 fee applies to a resubmission of
+returned papers. Ask when filing or call 571-272-3350.
+
 ### Known trap for when they do respond
 Recording an assignment updates the *assignment* database. It does not
 always update the **owner of record** shown on the application itself —
