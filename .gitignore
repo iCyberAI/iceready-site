@@ -7,3 +7,5 @@ tools/runway/output/
 # Never publish session notes or Claude instructions — GitHub Pages serves every tracked file
 SESSION_LOG*.md
 CLAUDE.md
+__pycache__/
+tools/seo/opportunities-*.md
