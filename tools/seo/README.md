@@ -29,12 +29,12 @@ printf '%s' "PASTE_SECRET" | gum auth use-oauth-client --client-id "PASTE_ID" --
 gum login --service searchconsole
 gum auth status --scopes webmasters,webmasters.readonly
 
-# 3. Confirm the property name (sc-domain:iceready.app or https://iceready.app/)
+# 3. Confirm the property name (https://iceready.app/ or https://iceready.app/)
 gum read searchconsole.sites.list --output json
 
 # 4. Submit the sitemap (one time; it's a write, so it needs --allow-write)
 gum write searchconsole.sitemaps.submit --allow-write \
-  --args '{"siteUrl":"sc-domain:iceready.app","feedpath":"https://iceready.app/sitemap.xml"}'
+  --args '{"siteUrl":"https://iceready.app/","feedpath":"https://iceready.app/sitemap.xml"}'
 
 # 5. Optional: let Claude Code call gum directly over MCP
 gum setup --target claude --features skills,mcp --dry-run   # preview, then drop --dry-run

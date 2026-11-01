@@ -22,17 +22,19 @@ import subprocess
 import sys
 from pathlib import Path
 
-SITE = "sc-domain:iceready.app"  # use "https://iceready.app/" if the property is URL-prefix
+SITE = "https://iceready.app/"  # URL-prefix property verified Nov 2026
 OUT_DIR = Path(__file__).resolve().parent
 
 
 def gum_query(site, start, end, dimensions, row_limit=5000):
     args = {
         "siteUrl": site,
-        "startDate": start,
-        "endDate": end,
-        "dimensions": dimensions,
-        "rowLimit": row_limit,
+        "body": {
+            "startDate": start,
+            "endDate": end,
+            "dimensions": dimensions,
+            "rowLimit": row_limit,
+        },
     }
     cmd = ["gum", "read", "searchconsole.searchanalytics.query",
            "--args", json.dumps(args), "--output", "json"]
