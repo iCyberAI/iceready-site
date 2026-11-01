@@ -1,0 +1,49 @@
+:root{--bg:#06080f;--surface:#0d1117;--surface2:#111827;--border:#1e2a3a;--accent:#00c8ff;--accent2:#ff4444;--text:#e8edf3;--muted:#8a99ab;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.7;min-height:100vh;}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 48px;background:rgba(6,8,15,0.95);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;color:var(--accent);text-decoration:none;}
+.nav-logo span{color:#fff;}
+.nav-back{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-left:20px;}
+.nav-back:hover{color:var(--accent);}
+.container{max-width:760px;margin:56px auto;padding:0 24px 80px;}
+.crumbs{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--muted);margin-bottom:20px;}
+.crumbs a{color:var(--muted);text-decoration:none;}
+.crumbs a:hover{color:var(--accent);}
+.label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:4px;color:var(--accent);text-transform:uppercase;margin-bottom:16px;}
+h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,7vw,64px);color:#fff;line-height:1.05;margin-bottom:16px;letter-spacing:1px;}
+.meta{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:2px;color:var(--muted);margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--border);}
+.direct-answer{background:rgba(0,200,255,0.06);border:1px solid var(--accent);border-radius:4px;padding:26px;margin-bottom:40px;}
+.direct-answer-tag{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:2px;color:var(--accent);text-transform:uppercase;font-weight:600;margin-bottom:10px;}
+.direct-answer p{font-size:17px;color:#fff;}
+h2{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:2px;color:#fff;margin:44px 0 16px;}
+h3{font-size:18px;color:#fff;margin:24px 0 8px;}
+p{margin-bottom:14px;color:var(--text);}
+ul,ol{margin:0 0 16px 22px;}
+li{margin-bottom:8px;}
+a{color:var(--accent);}
+.warn{background:rgba(255,68,68,0.07);border:1px solid var(--accent2);border-radius:4px;padding:20px 22px;margin:24px 0;}
+.warn strong{color:#fff;}
+.note{font-size:13px;color:var(--muted);border-top:1px solid var(--border);padding-top:18px;margin-top:40px;}
+table{width:100%;border-collapse:collapse;margin:12px 0 20px;font-size:15px;}
+th,td{border:1px solid var(--border);padding:10px 12px;text-align:left;vertical-align:top;}
+th{background:var(--surface2);color:#fff;font-weight:600;}
+.faq-item{background:var(--surface);border:1px solid var(--border);padding:22px;border-radius:4px;margin-bottom:14px;}
+.faq-q{font-weight:600;color:#fff;margin-bottom:6px;}
+.faq-a{color:var(--muted);margin:0;}
+.cta-box{margin-top:48px;background:var(--surface2);border:1px solid var(--accent);padding:36px 28px;text-align:center;border-radius:4px;}
+.cta-box h3{font-family:'Bebas Neue',sans-serif;font-size:34px;color:#fff;margin:0 0 10px;letter-spacing:2px;}
+.cta-box p{color:var(--muted);max-width:500px;margin:0 auto 24px;}
+.btn-primary{display:inline-block;background:var(--accent);color:var(--bg);font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:15px 30px;border-radius:2px;text-decoration:none;margin:4px;}
+.btn-secondary{display:inline-block;border:1px solid var(--accent);color:var(--accent);font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:14px 28px;border-radius:2px;text-decoration:none;margin:4px;}
+.related{margin-top:48px;}
+.related a{display:block;background:var(--surface);border:1px solid var(--border);padding:16px 18px;border-radius:4px;margin-bottom:10px;text-decoration:none;color:#fff;}
+.related a:hover{border-color:var(--accent);}
+.guide-list a{display:block;background:var(--surface);border:1px solid var(--border);padding:22px;border-radius:4px;margin-bottom:14px;text-decoration:none;}
+.guide-list a:hover{border-color:var(--accent);}
+.guide-list strong{display:block;font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:1px;color:#fff;}
+.guide-list span{color:var(--muted);font-size:15px;}
+footer{text-align:center;padding:44px 24px;border-top:1px solid var(--border);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;}
+footer a{color:var(--accent);text-decoration:none;}
+@media(max-width:640px){nav{padding:16px 20px;}.nav-back{margin-left:12px;font-size:11px;}}
